@@ -577,12 +577,14 @@ body {
     
     min-height: 740px;
 
-    background: rgb(215, 215, 215);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
-    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: #86aecc;
+    background: -moz-linear-gradient(top,  #86aecc 0%, #d5e5ef 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#86aecc), color-stop(100%,#d5e5ef));
+    background: -webkit-linear-gradient(top,  #86aecc 0%,#d5e5ef 100%);
+    background: -o-linear-gradient(top,  #86aecc 0%,#d5e5ef 100%);
+    background: -ms-linear-gradient(top,  #86aecc 0%,#d5e5ef 100%);
+    background: linear-gradient(top,  #86aecc 0%,#d5e5ef 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#86aecc', endColorstr='#d5e5ef',GradientType=0 );
 
     -webkit-font-smoothing: antialiased;
 }
@@ -761,13 +763,23 @@ body     { pointer-events: none; }
 }
 
 #title h1 {
-    font-size: 90px;
+    font-size: 80px;
+    position: absolute;
+    top: 33%;
+    left: 5%;
     
     -webkit-transform: translateZ(50px);
     -moz-transform:    translateZ(50px);
     -ms-transform:     translateZ(50px);
     -o-transform:      translateZ(50px);
     transform:         translateZ(50px);
+}
+
+#title p {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    text-align: right;
 }
 
 #title .footnote {
