@@ -57,7 +57,7 @@ sub parse_markdown {
     my $current_column = 0;
     for my $section ( @sections ) {
         my %attrs;
-        $attrs{ class } = 'step'; # default
+        $attrs{ class } = 'step slide'; # default
         while ( $section =~ /^<!\-{2,}\s*([^\s]+)\s*\-{2,}>/gm ) {
             my $attr = $1;
             if ( $attr =~ /(.+)="?([^"]+)?"?/ ) {
